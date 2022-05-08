@@ -1,0 +1,21 @@
+.header-mobile-banner {
+  > div {
+    position: relative;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .new-in {
+    position: absolute;
+    bottom: 20px;
+    right: var(--bs-gutter-x, 0.75rem);
+    font-family: 'Roboto', 'sans-serif';
+    padding: 5px 10px;
+    background-color: $white;
+    border-color: transparent;
+    text-transform: uppercase;
+  }
+}

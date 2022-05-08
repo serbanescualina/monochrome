@@ -1,0 +1,126 @@
+.header {
+  @include media-breakpoint-up(lg) {
+    background: url('/images/banners/banner.png') center center / cover
+      no-repeat;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &-top {
+    @include media-breakpoint-up(lg) {
+      margin-top: 40px;
+      padding: 0px 120px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &-bottom {
+    margin-top: -40px;
+    background-color: $main-col-primary;
+    color: $main-col-secondary;
+    @include media-breakpoint-up(lg) {
+      margin-top: 0;
+    }
+    ul {
+      text-transform: uppercase;
+
+      @include media-breakpoint-up(lg) {
+        justify-content: space-between;
+        padding: 15px 0 11px;
+      }
+      li {
+        font-size: 19px;
+
+        &:first-child {
+          font-size: 33px;
+          a {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &-site-controls {
+    & > ul {
+      display: grid;
+      grid-template-areas:
+        'logo icons'
+        'search search';
+      grid-row-gap: 10px;
+
+      @include media-breakpoint-up(lg) {
+        grid-template-areas: 'search icons';
+      }
+
+      & > ul {
+        grid-area: icons;
+        justify-content: flex-end;
+
+        li {
+          font-size: 20px;
+          margin-left: 20px;
+        }
+      }
+    }
+
+    .header-search {
+      grid-area: search;
+      display: flex;
+      justify-content: flex-end;
+
+      form {
+        flex-direction: row-reverse;
+        border: 1px solid rgba($white, 0.42);
+
+        @include media-breakpoint-up(lg) {
+          flex-direction: row;
+          border-color: $grey-light-col;
+        }
+        & > * {
+          background-color: transparent;
+          border-color: transparent;
+        }
+
+        button {
+          color: rgba($white, 0.72);
+
+          @include media-breakpoint-up(lg) {
+            color: $main-col-primary;
+          }
+        }
+
+        input {
+          padding-left: 10px;
+
+          ::placeholder {
+            color: rgba($white, 0.58);
+          }
+        }
+      }
+    }
+  }
+
+  &-logo {
+    grid-area: logo;
+    a {
+      font-size: 20px;
+      text-transform: uppercase;
+      color: $logo-col;
+    }
+  }
+
+  &-social-media {
+    color: $white;
+    align-items: center;
+
+    ul {
+      li {
+        margin-right: 30px;
+      }
+    }
+  }
+}
