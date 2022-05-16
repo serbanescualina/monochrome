@@ -1,0 +1,23 @@
+.footer-connect {
+  background-color: $main-col-secondary;
+  padding: 25px 57px;
+
+  @include media-breakpoint-up(lg) {
+    justify-self: start;
+    position: relative;
+  }
+
+  .footer-social {
+    font-size: 28px;
+    width: 60%;
+
+    @include media-breakpoint-up(lg) {
+      width: 100%;
+      font-size: 18px;
+    }
+  }
+
+  input {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+}
