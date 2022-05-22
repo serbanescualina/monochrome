@@ -94,7 +94,8 @@ export default function Footer(){
 
   </section>
 
-    <section className="footer-connect d-flex flex-column justify-content-center align-items-center text-center p-lg-0 text-lg-start">
+    <section className="footer-connect d-flex flex-column justify-content-center
+     align-items-center text-center text-lg-start">
       <section className="footer-newsletter ">
         <ul className="">
           <li>

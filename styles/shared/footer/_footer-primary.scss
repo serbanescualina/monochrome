@@ -3,11 +3,18 @@
     background-color: $main-col-secondary;
     color: $main-col-primary;
     padding: 40px 0;
+    font-size: 22px;
   }
 
   .wrap-footer-container {
+    &.container-lg {
+      padding-left: 0;
+      padding-right: 0;
+    }
     @include media-breakpoint-up(lg) {
       width: 100%;
+      padding-right: var(--bs-gutter-x, 0.75rem);
+      padding-left: var(--bs-gutter-x, 0.75rem);
       grid-template-columns: 3fr 1fr;
     }
   }
